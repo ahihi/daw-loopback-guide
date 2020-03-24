@@ -34,7 +34,7 @@ in Pd -> Preferences -> Audio, set the input device to your microphone and the o
 
 ![screenshot of Pure Data audio settings](media/pd-io.png)
 
-download the [input-to-output.pd](input-to-output.pd) patch from this repository and open it.
+download the [input-to-output.pd](input-to-output.pd) patch from this repository (right-click the Raw button -> save link as) and open it.
 
 ![screenshot of Pure Data patch](media/pd-patch.png)
 
