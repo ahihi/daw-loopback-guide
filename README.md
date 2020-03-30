@@ -42,6 +42,23 @@ you should now get microphone audio into the target software!
 
 the gain slider can be used to adjust volume (you may need to disable Edit Mode from the Edit menu to adjust the gain, otherwise dragging the slider will just move it around the canvas).
 
+## Linux
+
+You can load an ALSA loopback module by typing the following into a terminal:
+```
+sudo modprobe snd-aloop
+```
+This will create a new (virtual) soundcard called "loopback". You can check this via
+```
+aplay -l
+```
+This card provides a virtual speaker to write audio to and a virtual microphone to read audio data from.
+
+Some links to dig deeper:
+* [wikipedia: ALSA](https://en.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture)
+* [audacity manual: Tutorial - Recording Computer Playback on Linux](https://manual.audacityteam.org/man/tutorial_recording_computer_playback_on_linux.html)
+* [Jack and Loopback device as Alsa-to-Jack bridge](https://alsa.opensrc.org/Jack_and_Loopback_device_as_Alsa-to-Jack_bridge)
+
 ## Windows
 
 i havent set this up for Windows lately, but in theory it's a similar process, using e.g. [VB-CABLE](https://www.vb-audio.com/Cable/) as the loopback device. different audio driver types (WDM, ASIO) may also complicate the process, need to test...
